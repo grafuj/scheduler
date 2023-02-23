@@ -5,10 +5,10 @@ import classNames from "classnames";
 
 
 export default function InterviewerListItem(props) {
-  const id = props.key;
+  const id = props.id;
   const avatar = props.avatar;
   const name = props.name;
-  const setInterviewer = props.onChange;
+  const setInterviewer = props.setInterviewer;
 
   const ILIClass = classNames(
     "interviewers__item", {
@@ -16,7 +16,7 @@ export default function InterviewerListItem(props) {
   });
 
   return (
-    <li className={ILIClass} onClick={() => setInterviewer(id)}>
+    <li className={ILIClass} onClick={setInterviewer}>
       <img
         className="interviewers__item-image"
         src={avatar}
