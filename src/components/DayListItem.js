@@ -13,7 +13,7 @@ export default function DayListItem({name, setDay, selected, spots}) {
     "day-list__item--full": spots === 0
   });
   const formatSpots = (spots) => {
-    console.log("current number of spots:", spots);
+    // console.log("current number of spots:", spots);
     if (spots === 0) {
       return "no spots"
     }
