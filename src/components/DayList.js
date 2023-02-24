@@ -4,15 +4,16 @@ import "components/DayListItem";
 import classNames from "classnames";
 import DayListItem from "components/DayListItem";
 
-export default function DayList(props) {
+export default function DayList({days, day, onChange}) {
+  //const {days, day, onChange} = props
 
-  const list = props.days.map(day => {
+  const list = days.map(dayOfWeek => {
     return (<DayListItem
-      key={day.id}
-      name={day.name}
-      spots={day.spots}
-      selected={day.name === props.day}
-      setDay={props.onChange}
+      key={dayOfWeek.id}
+      name={dayOfWeek.name}
+      spots={dayOfWeek.spots}
+      selected={dayOfWeek.name === day}
+      setDay={onChange}
     />);
   });
 
