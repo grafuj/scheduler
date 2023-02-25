@@ -8,7 +8,7 @@ import "./styles.scss";
 
 
 export default function Appointment(props) {
-  const { interview, time } = props;
+  const { interview, time, } = props;
 
   return (
     <article className="appointment">
