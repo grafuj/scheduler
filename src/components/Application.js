@@ -4,7 +4,7 @@ import "components/Application.scss";
 import DayList from "components/DayList";
 import Appointment from "./Appointments";
 import axios from "axios";
-import { getAppointmentsForDay, getInterview } from "helpers/selectors";
+import { getAppointmentsForDay, getInterviewersForDay, getInterview } from "helpers/selectors";
 
 
 export default function Application() {
@@ -16,6 +16,7 @@ export default function Application() {
   });
 
   let dailyAppointments = [];
+  let dailyInterviewers = [];
 
   useEffect(() => {
     const daysURL = `/api/days`;
@@ -52,6 +53,8 @@ export default function Application() {
 
   dailyAppointments = getAppointmentsForDay(state, state.day);
 
+  dailyInterviewers = getInterviewersForDay(state, state.day)
+
   const schedule = dailyAppointments.map(appointment => {
     // console.log("appt:", appointment);
     const interview = getInterview(state, appointment.interview)
@@ -59,6 +62,7 @@ export default function Application() {
     return (<Appointment
       key={appointment.id}
       interview={interview}
+      interviewers={dailyInterviewers}
       {...appointment}
     />);
   });
