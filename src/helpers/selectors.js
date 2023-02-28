@@ -39,7 +39,6 @@ export function getInterviewersForDay(state, day) {
     // console.log("elem:", elem);
     return (elem.name === day);
   });
-
   // console.log("filterforday:", filterForDay);
 
   if (filterForDay === undefined) {
@@ -48,7 +47,6 @@ export function getInterviewersForDay(state, day) {
 
   for (const interviewerID of filterForDay.interviewers) {
     // console.log("Selection:", interviewerID, filterForDay, state.appointments);
-
     if (state.interviewers[interviewerID] && state.interviewers[interviewerID].id === interviewerID) {
       finalArray.push(state.interviewers[interviewerID]);
     }

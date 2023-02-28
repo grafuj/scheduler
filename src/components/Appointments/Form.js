@@ -20,7 +20,7 @@ export default function Form(props) {
 
   const save = (e) => {
     e.preventDefault();
-    onSave();
+    onSave(student, interviewer);
   };
 
   return (

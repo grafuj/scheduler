@@ -1,7 +1,6 @@
 import React from "react";
 import "components/DayListItem";
 
-import classNames from "classnames";
 import DayListItem from "components/DayListItem";
 
 export default function DayList({days, day, onChange}) {
