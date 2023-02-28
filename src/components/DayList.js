@@ -3,7 +3,7 @@ import "components/DayListItem";
 
 import DayListItem from "components/DayListItem";
 
-export default function DayList({days, day, onChange}) {
+export default function DayList({ days, day, onChange }) {
   //const {days, day, onChange} = props
 
   const list = days.map(dayOfWeek => {
