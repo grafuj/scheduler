@@ -1,12 +1,12 @@
 # Interview Scheduler
 Default View
-[Default View](https://github.com/grafuj/scheduler/blob/master/docs/Wednesday%20Default%20View.PNG?raw=true)
+![Default View](https://github.com/grafuj/scheduler/blob/master/docs/Wednesday%20Default%20View.PNG?raw=true)
 
 Add an interview
-[Add an interview](https://github.com/grafuj/scheduler/blob/master/docs/Adding%20an%20interview.PNG?raw=true)
+![Add an interview](https://github.com/grafuj/scheduler/blob/master/docs/Adding%20an%20interview.PNG?raw=true)
 
 Entries update with a loading screen while they're added to the database
-[Pending database addition](https://github.com/grafuj/scheduler/blob/master/docs/Pending%20screen%20to%20update%20the%20database.PNG?raw=true)
+![Pending database addition](https://github.com/grafuj/scheduler/blob/master/docs/Pending%20screen%20to%20update%20the%20database.PNG?raw=true)
 
 ## Setup
 
