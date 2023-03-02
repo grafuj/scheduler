@@ -31,10 +31,8 @@ export default function Appointment(props) {
 
   //get mode, transition and back from useVisualMode(does interview have value?)
   const initialMode = interview ? SHOW : EMPTY;
-  // console.log('interview:', id, initialMode, interview);
 
   const { mode, transition, back } = useVisualMode(initialMode);
-  // console.log('interview:', id, "current:", mode, "initial:", initialMode, interview);
 
   const save = (name, interviewer) => {
     const interview = {
@@ -55,7 +53,6 @@ export default function Appointment(props) {
 
   const onEdit = () => {
     transition(EDIT);
-    // console.log('current', interview.student, interview.interviewer.id);
   };
 
   const onDelete = () => {

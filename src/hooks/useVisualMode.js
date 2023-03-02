@@ -15,8 +15,7 @@ export default function useVisualMode(initial) {
   }
 
   function back() {
-    // console.log("back was called");
-    // console.log("entering back()", history, "history length:", history.length);
+
     if (history.length === 1) {
       return;
     }

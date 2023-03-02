@@ -3,7 +3,6 @@ import "components/DayListItem.scss";
 
 import classNames from "classnames";
 
-
 export default function DayListItem({name, setDay, selected, spots}) {
   // const {name, setDay} = props;
 
@@ -13,7 +12,6 @@ export default function DayListItem({name, setDay, selected, spots}) {
     "day-list__item--full": spots === 0
   });
   const formatSpots = (spots) => {
-    // console.log("current number of spots:", spots);
     if (spots === 0) {
       return "no spots"
     }

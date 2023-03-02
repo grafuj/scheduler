@@ -1,6 +1,4 @@
 import React from "react";
-// import "components/Appointments/styles.scss";
-
 
 export default function Show(props) {
   const {student, interviewer, onDelete, onEdit } = props;

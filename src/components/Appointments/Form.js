@@ -22,9 +22,6 @@ export default function Form(props) {
 
   const save = (e) => {
     e.preventDefault();
-    // console.log("student::::", student)
-    // console.log("interviewer::::", interviewer)
-    // string-valued student. This is just the name
 
     if(!student) {
       setError("Student name cannot be blank")

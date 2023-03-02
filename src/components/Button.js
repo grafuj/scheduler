@@ -11,8 +11,6 @@ export default function Button(props) {
     "button--confirm": confirm, 
     "button--danger": danger 
   })
-  // console.log("class test:", props.confirm)
-  // console.log("class danger:", props.danger)
 
   return (
     <button
