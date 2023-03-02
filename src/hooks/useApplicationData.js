@@ -47,7 +47,7 @@ export default function useApplicationData(initial) {
   };
 
   const bookInterview = (id, interview) => {
-    console.log("in bookInterview:", id, interview);
+    // console.log("in bookInterview:", id, interview);
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
@@ -61,7 +61,7 @@ export default function useApplicationData(initial) {
     // console.log(apptURL)
     return axios.put(apptURL, { interview })
       .then(response => {
-        console.log("done with put");
+        // console.log("done with put");
         const days = updateSpots(state, appointments);
         setState({ ...state, appointments, days });
       });
@@ -79,7 +79,7 @@ export default function useApplicationData(initial) {
     const apptURL = `/api/appointments/${id}`;
     return axios.delete(apptURL, null)
       .then(() => {
-        console.log("done with delete");
+        // console.log("done with delete");
         const days = updateSpots(state, appointments);
         setState({ ...state, appointments, days });
       });

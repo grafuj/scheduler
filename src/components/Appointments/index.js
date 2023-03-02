@@ -22,8 +22,8 @@ const ERROR_SAVE = "ERROR_SAVE";
 const error_save_msg = "There was an error saving the interview 😱";
 const ERROR_DELETE = "ERROR_DELETE";
 const error_delete_msg = "There was an error deleting the interview 😱";
-const saveLoading = "Saving...";
-const deleteLoading = "Deleting...";
+const saveLoading = "Saving ...";
+const deleteLoading = "Deleting ...";
 const deleteConfirmation = "Are you sure you want to delete?";
 
 export default function Appointment(props) {
@@ -34,7 +34,7 @@ export default function Appointment(props) {
   // console.log('interview:', id, initialMode, interview);
 
   const { mode, transition, back } = useVisualMode(initialMode);
-  console.log('interview:', id, "current:", mode, "initial:", initialMode, interview);
+  // console.log('interview:', id, "current:", mode, "initial:", initialMode, interview);
 
   const save = (name, interviewer) => {
     const interview = {
@@ -55,7 +55,7 @@ export default function Appointment(props) {
 
   const onEdit = () => {
     transition(EDIT);
-    console.log('current', interview.student, interview.interviewer.id);
+    // console.log('current', interview.student, interview.interviewer.id);
   };
 
   const onDelete = () => {
@@ -75,7 +75,7 @@ export default function Appointment(props) {
   };
 
   return (
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={time} />
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SHOW && (

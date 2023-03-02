@@ -24,7 +24,7 @@ export default function DayListItem({name, setDay, selected, spots}) {
   };
 
   return (
-    <li className={DLIClass} onClick={() => setDay(name)}>
+    <li className={DLIClass} data-testid="day" onClick={() => setDay(name)}>
       <h2 className="text--regular setDay">{name}</h2>
       <h3 className="text--light">{formatSpots(spots)} remaining</h3>
     </li>
