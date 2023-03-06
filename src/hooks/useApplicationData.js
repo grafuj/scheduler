@@ -60,7 +60,7 @@ export default function useApplicationData(initial) {
     return axios.put(apptURL, { interview })
       .then(response => {
         const days = updateSpots(state, appointments);
-        setState({ ...state, appointments, days });
+        setState(prev => ({...prev, appointments, days}))
       });
   };
 
@@ -77,7 +77,7 @@ export default function useApplicationData(initial) {
     return axios.delete(apptURL, null)
       .then(() => {
         const days = updateSpots(state, appointments);
-        setState({ ...state, appointments, days });
+        setState(prev => ({ ...prev, appointments, days }));
       });
   };
 

@@ -4,7 +4,6 @@ import "components/DayListItem.scss";
 import classNames from "classnames";
 
 export default function DayListItem({name, setDay, selected, spots}) {
-  // const {name, setDay} = props;
 
   const DLIClass = classNames(
     "day-list__item", {
