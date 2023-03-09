@@ -4,11 +4,11 @@ export default function useVisualMode(initial) {
   const [mode, setMode] = useState(initial);
   const [history, setHistory] = useState([initial]);
 
-  function transition(newMode, replace = false) {
+  function transition(newMode, replace = false, removals) {
     setMode(newMode);
     setHistory(prev => {
       if (replace) {
-        return [...prev.slice(0, prev.length - 2), newMode];
+        return [...prev.slice(0, prev.length - removals), newMode];
       }
       return [...prev, newMode];
     });
